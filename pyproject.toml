@@ -1,0 +1,52 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mcp-upa"
+version = "0.2.0"
+description = "MCP server on top of UPA — create and run parsing scenarios from Cursor/Claude"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Vanyc", email = "pimenovi037@gmail.com" }]
+dependencies = [
+  "mcp>=2.3.0",
+  "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "pytest-asyncio>=0.23",
+  "respx>=0.21",
+  "ruff>=0.6",
+]
+
+[project.scripts]
+mcp-upa = "mcp_upa.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/mcp_upa"]
+
+[tool.hatch.build.targets.wheel.sources]
+"src/mcp_upa" = "mcp_upa"
+
+[tool.hatch.build.targets.wheel.force-include]
+"src/mcp_upa/resources/element_map.md" = "mcp_upa/resources/element_map.md"
+"src/mcp_upa/resources/scenario_schema.md" = "mcp_upa/resources/scenario_schema.md"
+
+[tool.hatch.build.targets.sdist]
+include = ["src/mcp_upa", "README.md", "PLAN.md", "examples", "tests", "scripts"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]

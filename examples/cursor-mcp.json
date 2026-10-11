@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "mcp-upa": {
+      "command": "python",
+      "args": ["-m", "mcp_upa"],
+      "cwd": "D:\\Dowland\\MCP-UPA",
+      "env": {
+        "UPA_BASE_URL": "http://127.0.0.1:8000",
+        "UPA_TIMEOUT_SECONDS": "120"
+      }
+    }
+  }
+}

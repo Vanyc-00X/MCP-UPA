@@ -1,0 +1,1 @@
+"""Static MCP resource texts."""
