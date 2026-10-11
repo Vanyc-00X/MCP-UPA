@@ -20,7 +20,7 @@ Cursor / Claude создают и запускают сценарии парси
 | 5 | Advanced | deliver, healing, workflows (confirm) | **done** |
 | 6 | Полировка | smoke, troubleshooting, UX ошибок | **done** |
 
-После каждого этапа — commit и push в `https://github.com/Vanyc-00X/MCP-UPA-.git`
+После каждого этапа — commit и push в `https://github.com/Vanyc-00X/MCP-UPA.git`
 от identity владельца (без Cursor в Contributors).
 
 ## Вне скоупа

@@ -25,8 +25,8 @@ MCP-UPA does **not** embed Playwright or SQLite. It talks to a running UPA insta
 ## Install MCP-UPA
 
 ```powershell
-git clone https://github.com/Vanyc-00X/MCP-UPA-.git
-cd MCP-UPA-
+git clone https://github.com/Vanyc-00X/MCP-UPA.git
+cd MCP-UPA
 python -m venv .venv
 .\.venv\Scripts\python -m pip install -e ".[dev]"
 ```
